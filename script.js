@@ -19,6 +19,8 @@ window.addEventListener("DOMContentLoaded", () => {
  if(fontcolor && fontsize){
 	 // alert("after getting from cookie")
 	 // alert(fontsize);
+	 document.querySelector("#fontsize").value=fontsize.split("p")[0];
+	 document.querySelector("#fontcolor").value=fontcolor;
   document.querySelector("body").style.color=fontcolor;
   document.querySelector("body").style.fontSize=fontcolor;
  }	
