@@ -1,6 +1,6 @@
 //your JS code here. If required.
 
-document.querySelector("input[type='submit']").addEventListener("click", () => {
+window.addEventListener("DOMContentLoaded", () => {
       let fontsize="";
 	   let fontcolor="";
 	let cookies = document.cookie.split(";"); // Splitting all cookies
@@ -8,16 +8,17 @@ document.querySelector("input[type='submit']").addEventListener("click", () => {
         let cookiePair = cookies[i].split("="); 
         let key = cookiePair[0].trim(); // Trim spaces to avoid mismatch
         if (key ==="fontsize") {
-            alert(cookiePair[1]);
+            // alert(cookiePair[1]);
 			fontsize=cookiePair[1];
         }
 		else if(key=="fontcolor"){
 			fontcolor=cookiePair[1];
 		}
     }
- 
+       
  if(fontcolor && fontsize){
-	 alert(fontcolor);
+	 // alert("after getting from cookie")
+	 // alert(fontsize);
   document.querySelector("body").style.color=fontcolor;
   document.querySelector("body").style.fontSize=fontcolor;
  }	
